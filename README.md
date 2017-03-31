@@ -2,6 +2,7 @@
 FuzzyID2 is an approach for species identification using DNA barcoding tech.
 
 FuzzyID2 installation:
+
     X86_64 compile command:
         g++ main.cpp mainFunction.cpp commonFunction.cpp -o FuzzyID2_X86_64 -lsqlite3 -lbpp-core -lbpp-seq -lbpp-phyl -Wl,-rpath ./lib64 -L ./lib64 -I ./include
         ln -s FuzzyID2_X86_64 FuzzyID2
@@ -11,6 +12,7 @@ FuzzyID2 installation:
         ln -s FuzzyID2_i686 FuzzyID2
 
 FuzzyID2 execute commands:
+
     1.make reference database
         python3 FuzzyID2_makeDB.py
     2.fuzzy formula paramaters estimation
