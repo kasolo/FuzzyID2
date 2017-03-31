@@ -1,0 +1,16 @@
+#paramaters for FuzzyID2 reference database construction
+################################################
+refDBName=Plant	#reference database name
+refMarker=rbcl|its|trnl	#input dataset barcode marker
+refFileFormat=fasta	#input reference dataset file format(tsv or fasta, tsv file can be download from BOLD)
+refFileName=./datasets/plant/BJ_rbcl.fas|./datasets/plant/BJ_its.fas|./datasets/plant/BJ_trnl.fas	#input reference dataset file path and name
+refRoughMarker=rbcl	#barcode marker using in rough scan step
+refMDMarker=its|trnl	#barcode marker using in MD search step
+
+Max_length_DNA=10000	#barcode length check, based on refMarker
+Min_length_DNA=100	#barcode length check, based on refMarker
+roughMaxNum=20	#max barcodes number from each species to form the rough scan database, based on the reference datasets scale
+roughMinNum=5	#min threshold for each species, if barcodes number of the species is under this threshold, then barcodes are all been used to form the rough scan database 
+roughPercent=0.3	#perscent of barcodes to form the rough scan database of each species
+deleteRepeatSeq=on	#reserve one sequence if barcodes sequences are consistent(off or on)
+estimateFuzzyPara=off	#estimate paramater theta1 and theta2 in database construction step(on), after ID step(off)
